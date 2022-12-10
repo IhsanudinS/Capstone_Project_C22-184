@@ -54,6 +54,7 @@ module.exports = {
     }),
     
     new CleanWebpackPlugin(),
+    
     new GenerateSW({
       swDest: 'sw.bundle.js',
     }),

@@ -6,7 +6,7 @@ class NavBar extends HTMLElement {
     render() {
         this.innerHTML = `
         <header class="header-area">
-            <a href="/"><img src="images/logo.png" class="logo"></a>
+            <a href="/"><img src="images/logo.png" class="logo" alt="gambar_logo"></a>
             <input type="checkbox" id="toggler">
             <label for="toggler">☰</label>
             <nav class="menu" id="drawer">
