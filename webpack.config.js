@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 //const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -53,5 +54,8 @@ module.exports = {
     }),
     
     new CleanWebpackPlugin(),
+    new GenerateSW({
+      swDest: 'sw.bundle.js',
+    }),
   ],
 };
